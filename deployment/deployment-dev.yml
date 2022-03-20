@@ -18,9 +18,9 @@ spec:
             - name: AzureWebJobstestlocalqueue
               valueFrom:
                 secretKeyRef:
-                name: azure-storage-queue-secret
-                key: ConnectionString
-                optional: false
+                  name: azure-storage-queue-secret
+                  key: ConnectionString
+                  optional: false
           resources:
             limits:
               memory: 128Mi

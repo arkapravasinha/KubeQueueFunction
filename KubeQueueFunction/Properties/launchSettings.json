@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "KubeQueueFunction": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 33005,
+      "useSSL": false
+    }
+  }
+}

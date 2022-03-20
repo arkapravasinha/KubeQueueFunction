@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubequeuefunctions-deployment
+spec:
+  selector:
+    matchLabels:
+      app: kubequeuefunctions-pod
+  template:
+    metadata:
+      labels:
+        app: kubequeuefunctions-pod
+    spec:
+      containers:
+        - name: kubequeuefunctions-container
+          image: ghcr.io/arkapravasinha/kubequeuefunctions:v1.0.1
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: 500m
+          ports:
+            - containerPort: 80
+

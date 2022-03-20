@@ -2,7 +2,6 @@ apiVersion: keda.k8s.io/v1alpha1
 kind: ScaledObject
 metadata:
   name: azure-storage-queue-consumer
-  namespace: default
 spec:
   scaleTargetRef:
     deploymentName: kubequeuefunctions-deployment # must be in the same namespace as the ScaledObject

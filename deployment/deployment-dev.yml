@@ -14,6 +14,13 @@ spec:
       containers:
         - name: kubequeuefunctions-container
           image: ghcr.io/arkapravasinha/kubequeuefunctions:v0.1.1
+          env:
+            - name: AzureWebJobstestlocalqueue
+              valueFrom:
+                secretKeyRef:
+                name: azure-storage-queue-secret
+                key: ConnectionString
+                optional: false
           resources:
             limits:
               memory: 128Mi

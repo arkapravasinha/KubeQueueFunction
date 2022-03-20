@@ -13,11 +13,10 @@ spec:
     spec:
       containers:
         - name: kubequeuefunctions-container
-          image: ghcr.io/arkapravasinha/kubequeuefunctions:v1.0.1
+          image: ghcr.io/arkapravasinha/kubequeuefunctions:v0.1.0
           resources:
             limits:
               memory: 128Mi
               cpu: 500m
           ports:
             - containerPort: 80
-
